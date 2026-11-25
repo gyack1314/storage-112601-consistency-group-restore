@@ -1,0 +1,13 @@
+[
+  "cancel",
+  "commit",
+  "flush",
+  "freeze",
+  "inspect",
+  "lost",
+  "restart",
+  "restore",
+  "sealed",
+  "volume",
+  "write"
+]

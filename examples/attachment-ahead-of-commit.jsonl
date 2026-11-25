@@ -1,0 +1,11 @@
+{"at":0,"kind":"volume","record":{"group":"exp","volume":"journal","blocks":4}}
+{"at":0,"kind":"volume","record":{"group":"exp","volume":"blobs","blocks":8}}
+{"at":1,"kind":"write","record":{"group":"exp","volume":"blobs","batch":"b1","seq":1,"block":2,"data":"xyz"}}
+{"at":2,"kind":"flush","record":{"group":"exp","volume":"blobs","through":1}}
+{"at":3,"kind":"freeze","record":{"group":"exp","id":"s1","deadline":7}}
+{"at":4,"kind":"sealed","record":{"id":"s1","volume":"blobs","through":1}}
+{"at":5,"kind":"write","record":{"group":"exp","volume":"journal","batch":"b1","seq":2,"block":0,"data":"ref:2"}}
+{"at":6,"kind":"commit","record":{"group":"exp","batch":"b1","requires":[1,2]}}
+{"at":7,"kind":"sealed","record":{"id":"s1","volume":"journal","through":0}}
+{"at":8,"kind":"inspect","record":{"id":"s1"}}
+{"at":9,"kind":"restore","record":{"id":"s1","target":"replay","mapping":{"blobs":"data","journal":"manifest"}}}
