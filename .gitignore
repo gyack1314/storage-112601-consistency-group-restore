@@ -10,3 +10,9 @@ coverage/
 __pycache__/
 *.py[cod]
 .DS_Store
+
+# 本地演练/运行状态（可用 storage_ctl --root 指定到别处）
+groupvol_lab/
+demo_lab/
+*.lab/
+
